@@ -3,20 +3,28 @@
 	padding: 0;
 }
 
+@font-face{
+  font-family: 'Futura';
+  src: url('futura.ttf');
+}
 
+@font-face {
+  font-family: 'Letter Gothic';
+  src: url('lettergothic.otf');
+}
 body {
 
 	text-align: center;
 	margin: 0;
 	color: #eea1ac;
-  font-family: 'Anonymous Pro';
+  font-family: 'Futura';
 }
 
 p {
 	margin: 1em 1em 1em 1em;
 	color:#F0E8D0;
 	font-size: 20px;
-  font-family: 'Anonymous Pro';
+  font-family: 'Futura';
 }
 
 img { 
@@ -80,6 +88,7 @@ img {
   margin-top: 2em;
   text-align: left;
   opacity: 1;
+  font-family: 'Futura';
 }
 
 #introoverlay {
