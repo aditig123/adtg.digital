@@ -80,6 +80,9 @@ img {
   opacity: 1;
 }
 
+.container:hover .middle .text {
+}
+
 .text {
   color:#f6cdd5 ;
   font-size: 2em;
