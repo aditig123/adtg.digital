@@ -80,19 +80,17 @@ img {
   opacity: 1;
 }
 
-.container:hover .middle .text {
-}
 
 .text {
   color:#f6cdd5 ;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 16px 32px;
   background-color: #f6cdd5;
 }
 
 #intro{
   color: #000;
-  font-size: 2em;
+  font-size: 1.75em;
   background-color: #fff;
   margin-top: 5.5em;
   margin-left: 1.5em;
