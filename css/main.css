@@ -8,10 +8,6 @@
   src: url('futura.ttf');
 }
 
-@font-face {
-  font-family: 'Letter Gothic';
-  src: url('lettergothic.otf');
-}
 body {
 
 	text-align: center;
@@ -35,11 +31,15 @@ img {
   margin-bottom: -3px;
 }
 
+video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: -3px;
 
-a {
-  color: white;
-  text-decoration: none;
 }
+
 .arrow {
   text-align: center;
   margin: 8% 0;
@@ -98,26 +98,6 @@ a {
     margin-bottom: -3px;
 }
 
-<!-- THIS IT -->
-.docScroller {
-  overflow-x: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  -webkit-scroll-snap-points-y: repeat(100%);
-      -ms-scroll-snap-points-y: repeat(100%);
-          scroll-snap-points-y: repeat(100%);
-  -webkit-scroll-snap-type: mandatory;
-      -ms-scroll-snap-type: mandatory;
-          scroll-snap-type: mandatory;
-  -webkit-scroll-snap-destination: 100% 0%;
-      -ms-scroll-snap-destination: 100% 0%;
-          scroll-snap-destination: 100% 0%;
-}
-
-<!-- end -->
 
 .image {
   opacity: 1;
@@ -139,8 +119,7 @@ a {
 }
 
 .container:hover .image {
-  -webkit-filter:blur(2.5px);
-  filter: blur(2.5px);
+ transform: scale(1.02);
 }
 
 .container:hover .middle {
@@ -224,6 +203,7 @@ a:hover {
 
 footer{
   padding: 1.5em;
+  margin-top: 1em;
 }
 
 .icons {
