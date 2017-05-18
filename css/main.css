@@ -158,7 +158,8 @@ section:hover .middle {
     height: 100%;
     overflow: auto;
     font-size: 1.5em;
-    display: inline-block;
+    position: fixed;
+    width: 25%;
 }
 
 .mycontent-left p {
@@ -166,6 +167,7 @@ section:hover .middle {
     color: #000;
     text-decoration: none;
     text-align: left;
+    padding: .25em;
 }
 
 li a.active {
