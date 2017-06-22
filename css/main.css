@@ -110,7 +110,7 @@ section:hover .middle {
 
 .mycontent-left {
     margin: 0;
-    padding: 0;
+    padding: .75em;
     height: 100%;
     overflow: auto;
     font-size: 1.5em;
