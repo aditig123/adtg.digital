@@ -12,6 +12,8 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -37,6 +39,7 @@ $(document).ready(function(){
     } // End if
   });
 });
+
 </script>
 	</head>
 
@@ -48,58 +51,66 @@ $(document).ready(function(){
 			    I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
 			 	</div>
 
-			 	<div class="nav"><a href="#micro">MICRO BEAUTY</a> <a href="#bacteria">BACTERIA LETTERFORMS</a> <a href="#f2f">FACE TO FACE CAMPAIGN</a> <a href="#jargon">DESIGN JARGON</a> <a href="#jm">JOY MACHINE IDENTITY</a> <a href="#contact" style="padding-right: 0;"> CONTACT/SOCIAL</a> </div>
+			 	<div class="mouseOver_text" id="nav">
+ <a class="screenshot" href="micro.html" rel="images/microcover.jpg">MICRO BEAUTY</a>
+<a class="screenshot" href="bacteria.html" rel="images/bacteriacover.jpg">BACTERIA LETTERFORMS</a>
+<a class="screenshot" href="f2f.html" rel="images/f2fcover.jpg">FACE TO FACE CAMPAIGN</a>
+<a class="screenshot" href="jargon.htl" rel="images/jargoncover.jpg">DESIGN JARGON</a>
+<a class="screenshot" href="jm.html" rel="images/jmcover.gif">JOY MACHINE IDENTITY</a>
+<a href="#contact">CONTACT/SOCIAL</a>
+</div>
 		  	</div>
 		  	<img  src="images/landing.jpg">
 		</section>
 
 
-		<a href="micro.html">
-			<section id="micro">
-			 <img class=image src="images/microcover.jpg" alt="micro">
-			  <div class="middle" id="#micro">
-			    <div class="text"><a href="micro.html">MICRO BEAUTY</a></div>
-			  </div>
-			</section>
-		</a>
-
-		<a href="bacteria.html" style="background-color: #fff;">
-		<section id="bacteria">
-		  <img class=image style="width: 100%;" src="images/bacteriacover.jpg" alt="bacteria letterform">
-		  <div class="middle">
-		    <div class="text"><a href="bacteria.html">BACTERIA LETTERFORMS</a></div>
-		  </div>
-		</section></a>
-		
-		
-		<a href="f2f.html">
-			<section id="f2f">
-			  <img class=image src="images/f2fcover.jpg" alt="face to face campaign">
-			  <div class="middle">
-			    <div class="text"><a href="f2f.html">FACE TO FACE CAMPAIGN</a></div>
-			  </div>
-			</section>
-		</a>
-		
-		<a href="jargon.html">
-			<section id="jargon">
-			  <img class=image src="images/jargoncover.jpg" alt="design event poster">
-			  <div class="middle">
-			    <div class="text"><a href="jargon.html">DESIGN JARGON</a></div>
-			  </div>
-			</section>
-		</a>
-
-		<a href="jm.html">
-		<section id="jm">
-			 <img class=image src="images/jmcover.gif" alt="joy machine identity">
-			  <div class="middle">
-			    <div class="text"><a href="jm.html">JOY MACHINE IDENTITY</a></div>
-			  </div>
-		</section>
-		</a>
-
 </body>
+<script type="text/javascript">
+function previewImages() {
+  /* CONFIG */
+
+  xOffset = 300;
+  yOffset = -250;
+
+  // these 2 variable determine popup's distance from the cursor
+  // you might want to adjust to get the right result
+
+  /* END CONFIG */
+
+  $("a.screenshot").hover(
+    function(e) {
+      var $this = $(this); // caching $(this)
+
+
+      $("body").append(
+        "<div id='previewImage'><img src='" +
+        this.rel +
+        "' alt='rens preview image' />" +
+        "</div>"
+      );
+
+      $("#previewImage")
+        .css("top", e.pageY - xOffset + "px")
+        .css("left", e.pageX + yOffset + "px")
+        .fadeIn("fast");
+    },
+    function() {
+      var $this = $(this); // caching $(this)
+      $this.text($this.data("initialText"));
+
+      $("#previewImage").remove();
+    }
+  );
+
+  $("a.screenshot").mousemove(function(e) {
+    $("#previewImage")
+      .css("top", e.pageY - xOffset + "px")
+      .css("left", e.pageX + yOffset + "px");
+  });
+}
+
+previewImages();
+</script>
 <footer id="contact">
 	<p><a href="mailto:aditigangurde@gmail.com?Subject=Hi!" target="_top" style="background-color: none;">EMAIL</a>
 	

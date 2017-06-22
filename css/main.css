@@ -59,15 +59,65 @@ video {
   position: absolute;
 }
 
-.nav {
-  margin-top:17em; 
+#nav {
+  margin-top:27em; 
   text-align: center;
 }
 
-.nav a {
+#nav a {
   padding-right: 3em;
 }
+body {
+  box-sizing: border-box;
+  background-color: white;
+  min-height: 100%;
+}
 
+.mouseOver_text {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  text-align: center;
+}
+.mouseOver_text img {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0 auto;
+}
+.mouseOver_text h1 {
+  font-family: "Futura";
+  margin: 0.5em;
+  letter-spacing: 2px;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.mouseOver_text h1 a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+.mouseOver_text h1:hover {
+  letter-spacing: 4px;
+}
+
+#previewImage {
+  position: absolute;
+  display: none;
+  color: #fff;
+  z-index: 2;
+}
+#previewImage img {
+  width: 35vw;
+}
 section {
     position: relative;
     margin-bottom: -3px;
