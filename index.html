@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"id=top>
 	<head>	
 		<meta charset="UTF-8">
 		<meta name="author" content="Aditi Gangurde">
@@ -10,9 +10,24 @@
 		<link rel="stylesheet" href="css/main.css">
 
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<style type="text/css">
+  img{
+    width: 100%;
+  }
+  body {
+    background-image: url(images/landing.jpg);
+  }
+  @media only screen and (max-width: 500px) {
+    #intro {
+        padding: 1em;
+        padding-top: .5em;
+    }
+}
+</style>
 
 <script>
 $(document).ready(function(){
@@ -45,26 +60,28 @@ $(document).ready(function(){
 
 	<body>
 		<section id="landing">
-			  <div id="introoverlay">
-			    <div id="intro">
-			   	<p style="color:#000; font-size: .5em; margin-top:10em; letter-spacing: 2px;">ADITI GANGURDE</p>
-			    I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
-			 	</div>
+			 <div id="background">
 
-			 	<div class="mouseOver_text" id="nav">
- <a class="screenshot" href="micro.html" rel="images/microcover.jpg">MICRO BEAUTY</a>
-<a class="screenshot" href="bacteria.html" rel="images/bacteriacover.jpg">BACTERIA LETTERFORMS</a>
-<a class="screenshot" href="f2f.html" rel="images/f2fcover.jpg">FACE TO FACE CAMPAIGN</a>
-<a class="screenshot" href="jargon.htl" rel="images/jargoncover.jpg">DESIGN JARGON</a>
-<a class="screenshot" href="jm.html" rel="images/jmcover.gif">JOY MACHINE IDENTITY</a>
-<a href="#contact">CONTACT/SOCIAL</a>
-</div>
-		  	</div>
-		  	<img  src="images/landing.jpg">
+			   <div id="intro">
+			   	<p style="font-size: .5em; letter-spacing: 2px;">ADITI GANGURDE</p>
+			    I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
+			 	 </div>
+
+			 	 <div class="mouseOver_text" id="nav">
+            <a class="screenshot" href="micro.html" rel="images/microcover.jpg">MICRO BEAUTY</a>
+            <a class="screenshot" href="bacteria.html" rel="images/bacteriacover.jpg">BACTERIA LETTERFORMS</a>
+            <a class="screenshot" href="f2f.html" rel="images/f2fcover.jpg">FACE TO FACE CAMPAIGN</a>
+            <a class="screenshot" href="jargon.htl" rel="images/jargoncover.jpg">DESIGN JARGON</a>
+            <a class="screenshot" href="jm.html" rel="images/jmcover.gif">JOY MACHINE IDENTITY</a>
+            <a href="#contact">CONTACT/SOCIAL</a>
+          </div>
+
+		  </div>
 		</section>
 
 
 </body>
+
 <script type="text/javascript">
 function previewImages() {
   /* CONFIG */
@@ -111,6 +128,7 @@ function previewImages() {
 
 previewImages();
 </script>
+
 <footer id="contact">
 	<p><a href="mailto:aditigangurde@gmail.com?Subject=Hi!" target="_top" style="background-color: none;">EMAIL</a>
 	
@@ -129,7 +147,7 @@ previewImages();
 	</br><p style="font-size: .75em; color: #f6cdd5;">
 		coded by aditi gangurde :) 
 	</p>
-		<a href="#landing" style="padding-right: 0; font-size: 1.5em;">↑</a>
+		<a href="#top" style="padding-right: 0; font-size: 1.5em;">↑</a>
 </footer>
 
 </html>

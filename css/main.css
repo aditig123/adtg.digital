@@ -15,6 +15,9 @@ body {
 	margin: 0;
 	color:white ;
   font-family: 'Futura';
+  box-sizing: border-box;
+  background-color: white;
+  min-height: 100%;
 }
 
 p {
@@ -30,7 +33,6 @@ img {
 	padding: 0;
 	width: 100%;
 	height: auto;
-  margin-bottom: -3px;
 }
 
 video {
@@ -38,39 +40,34 @@ video {
   padding: 0;
   width: 100%;
   height: auto;
-  margin-bottom: -3px;
 
 }
 
 #intro {
   color: #000;
-  font-size: 2.2em;
+  font-size: 32px;
+  padding: 5em;
   text-align: center;
-  padding-left: 10em; 
-  padding-right: 10em; 
-  opacity: 1;
   font-family: 'Futura';
+  background-color: #fff;
 }
 
-#introoverlay {
-  margin: 1em;
-  padding: 0;
-  opacity: 1;
-  position: absolute;
+#background {
+  margin: 2em;
+  position: relative;
+  background-color: #fff;
 }
 
 #nav {
-  margin-top:27em; 
+  padding-top: 7em;
+  margin-top: 5em;
   text-align: center;
+  background-color: #fff;
+  position: relative;
 }
 
 #nav a {
   padding-right: 3em;
-}
-body {
-  box-sizing: border-box;
-  background-color: white;
-  min-height: 100%;
 }
 
 .mouseOver_text {
@@ -119,43 +116,9 @@ body {
   width: 35vw;
 }
 section {
-    position: relative;
-    margin-bottom: -3px;
-    width: 100%;
-}
-
-section:hover .image {
- transform: scale(1.02);
-}
-
-section:hover .middle {
-  opacity: 1;
-}
-
-.image {
-  opacity: 1;
-  display: block;
   width: 100%;
   height: auto;
-  transition: 1s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
-
-.text {
-  color:#f6cdd5 ;
-  font-size: 1em;
-  padding: .5em;
-  background-color: #fff;
+  min-height: 100%;
 }
 
 .mycontent-left {
@@ -216,7 +179,7 @@ a:hover {
   padding: 0;
 }
 
-.astrick {
+.asterisk {
   font-size: .6em;
 }
 
@@ -225,9 +188,15 @@ a:hover {
 
 }
 
+.contact {
+ position: absolute;
+}
+
 footer{
   padding: .5em;
   margin-top: 1em;
+  height: 100px;
+  background-color: #fff;
 }
 
 footer p{
@@ -236,10 +205,4 @@ footer p{
 
 footer a{
   padding-right: 3em;
-}
-
-@media only screen and (max-width: 890px;) {
-  #intro {
-    font-size: .5em;
-  }
 }
