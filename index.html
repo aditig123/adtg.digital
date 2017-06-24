@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"id=top>
+<html lang="en" id="top">
 	<head>	
 		<meta charset="UTF-8">
 		<meta name="author" content="Aditi Gangurde">
@@ -9,12 +9,16 @@
 		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
-<style type="text/css">
+
+
+<!-- <style type="text/css">
   img{
     width: 100%;
   }
@@ -27,67 +31,72 @@
         padding-top: .5em;
     }
 }
-</style>
+</style> -->
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+  </head>
 
-      // Store hash
-      var hash = this.hash;
+  <body id="mainBody">
+  	<section id="landing">
+      <div class="container-fluid mainContainer">
+        <div id="background" class="row">
+    			<div class="col-lg-12">
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
+    			   <div id="intro">
+                <div class="infoText">
+        			   	<p style="font-size: .5em; letter-spacing: 2px;">ADITI GANGURDE</p>
+        			    I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
+                </div>
+    			 	 </div>
 
-</script>
-	</head>
+    			 	  <div class="mouseOver_text" id="nav">
+                <a class="screenshot" href="micro.html" rel="images/microcover.jpg">MICRO BEAUTY</a>
+                <a class="screenshot" href="bacteria.html" rel="images/bacteriacover.jpg">BACTERIA LETTERFORMS</a>
+                <a class="screenshot" href="f2f.html" rel="images/f2fcover.jpg">FACE TO FACE CAMPAIGN</a>
+                <a class="screenshot" href="jargon.html" rel="images/jargoncover.jpg">DESIGN JARGON</a>
+                <a class="screenshot" href="jm.html" rel="images/jmcover.gif">JOY MACHINE IDENTITY</a>
+                <a href="#contact">CONTACT/SOCIAL</a>
+              </div>
 
-	<body>
-		<section id="landing">
-			 <div id="background">
+              <footer id="contact">
+                <p><a href="mailto:aditigangurde@gmail.com?Subject=Hi!" target="_top" style="background-color: none;">EMAIL</a>
+                
+                <a href="images/resume.pdf" target="_blank">
+                  RESUME
+                </a> 
 
-			   <div id="intro">
-			   	<p style="font-size: .5em; letter-spacing: 2px;">ADITI GANGURDE</p>
-			    I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
-			 	 </div>
+                <a href="https://www.behance.net/adtg" target="_blank">
+                  BEHANCE
+                </a> 
 
-			 	 <div class="mouseOver_text" id="nav">
-            <a class="screenshot" href="micro.html" rel="images/microcover.jpg">MICRO BEAUTY</a>
-            <a class="screenshot" href="bacteria.html" rel="images/bacteriacover.jpg">BACTERIA LETTERFORMS</a>
-            <a class="screenshot" href="f2f.html" rel="images/f2fcover.jpg">FACE TO FACE CAMPAIGN</a>
-            <a class="screenshot" href="jargon.htl" rel="images/jargoncover.jpg">DESIGN JARGON</a>
-            <a class="screenshot" href="jm.html" rel="images/jmcover.gif">JOY MACHINE IDENTITY</a>
-            <a href="#contact">CONTACT/SOCIAL</a>
+                <a href="https://twitter.com/adtg_1" target="_blank"  class="icons" style="padding-right: 0;">
+                  TWITTER
+                </a> 
+                
+                </br><p style="font-size: .75em; color: #f6cdd5;">
+                  coded by aditi gangurde :) 
+                </p>
+                  <a href="#top" style="padding-right: 0; font-size: 1.5em;">↑</a>
+              </footer>
           </div>
+        </div>
+      </div>
+    </section>
 
-		  </div>
-		</section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
 
 
-</body>
 
 <script type="text/javascript">
+
 function previewImages() {
   /* CONFIG */
 
   xOffset = 300;
-  yOffset = -250;
+  yOffset = -200;
 
   // these 2 variable determine popup's distance from the cursor
   // you might want to adjust to get the right result
@@ -126,28 +135,44 @@ function previewImages() {
   });
 }
 
-previewImages();
+$(document).ready(function() {
+   $(window).resize();
+});
+
+$(window).resize(function() {
+   if ($(this).width() > 700) {
+      previewImages()
+   }
+});
+
+
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
 </script>
 
-<footer id="contact">
-	<p><a href="mailto:aditigangurde@gmail.com?Subject=Hi!" target="_top" style="background-color: none;">EMAIL</a>
-	
-	<a href="images/resume.pdf" target="_blank">
-		RESUME
-	</a> 
-
-	<a href="https://www.behance.net/adtg" target="_blank">
-		BEHANCE
-	</a> 
-
-	<a href="https://twitter.com/adtg_1" target="_blank"  class="icons" style="padding-right: 0;">
-		TWITTER
-	</a> 
-	
-	</br><p style="font-size: .75em; color: #f6cdd5;">
-		coded by aditi gangurde :) 
-	</p>
-		<a href="#top" style="padding-right: 0; font-size: 1.5em;">↑</a>
-</footer>
 
 </html>

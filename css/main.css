@@ -20,6 +20,14 @@ body {
   min-height: 100%;
 }
 
+#mainBody{
+  background: url(../images/landing.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 p {
 	margin: 1em 1em 1em 1em;
 	color:#000;
@@ -43,23 +51,32 @@ video {
 
 }
 
+#landing > div {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 #intro {
   color: #000;
   font-size: 32px;
-  padding: 5em;
+  padding: 2em;
   text-align: center;
   font-family: 'Futura';
   background-color: #fff;
 }
 
+.infoText {
+  margin:3em;
+}
+
 #background {
   margin: 2em;
   position: relative;
-  background-color: #fff;
 }
 
 #nav {
-  padding-top: 7em;
+  padding-top: 10em;
+  padding-bottom: 10em;
   margin-top: 5em;
   text-align: center;
   background-color: #fff;
@@ -163,10 +180,11 @@ a:link{
 	color: #000;
   text-align: center;
   font-family: 'Letter Gothic';
-  font-size: 0.8em;
+  font-size: .9em;
 }
 a:hover {
   color: #f6cdd5;
+  text-decoration: none;
 }
 
 
@@ -193,9 +211,8 @@ a:hover {
 }
 
 footer{
-  padding: .5em;
-  margin-top: 1em;
-  height: 120px;
+  padding: 1em;
+  margin-top: 15em;
   background-color: #fff;
 }
 
@@ -206,3 +223,18 @@ footer p{
 footer a{
   padding-right: 3em;
 }
+
+@media (max-width: 850px) {
+  .infoText {
+    margin: .4em;
+  }
+  #intro {
+    padding: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  #intro {
+    padding: 0;
+  }
+} 
