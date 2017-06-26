@@ -63,6 +63,8 @@ video {
   text-align: center;
   font-family: 'Futura';
   background-color: #fff;
+  width: 100%:
+  height: auto;
 }
 
 .infoText {
