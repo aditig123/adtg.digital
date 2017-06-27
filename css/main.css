@@ -92,6 +92,12 @@ video {
 #nav a {
   padding-right: 3em;
   font-size: 1em;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  color: #f6cdd5;
+
 }
 
 .mouseOver_text {
@@ -223,14 +229,17 @@ footer{
   padding: 1em;
   margin-top: 15em;
   background-color: #fff;
+  text-decoration: none;
 }
 
 footer p{
   font-size: 1em;
+  text-decoration: none;
 }
 
 footer a{
   padding-right: 3em;
+  text-decoration: none;
 }
 
 @media (max-width: 850px) {
