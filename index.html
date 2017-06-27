@@ -13,166 +13,75 @@
 
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
+    <!-- Animate.css -->
 
-
-<!-- <style type="text/css">
-  img{
-    width: 100%;
-  }
-  body {
-    background-image: url(images/landing.jpg);
-  }
-  @media only screen and (max-width: 667px) {
-    #intro {
-        padding: 1em;
-        padding-top: .5em;
-    }
-}
-</style> -->
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 
   <body id="mainBody">
-  	<section id="landing">
-      <div class="container-fluid mainContainer">
-        <div id="background" class="row">
+      <div id="background" class="container-fluid">
+        <div class="row">
     			<div class="col-lg-12">
-
-    			   <div id="intro">
-                <div class="infoText">
-        			   	<p style="font-size: .5em; letter-spacing: 2px;">ADITI GANGURDE</p>
-        			    I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
-                </div>
-    			 	 </div>
-
-    			 	  <div class="mouseOver_text" id="nav">
-                <a class="screenshot" href="micro.html" rel="images/micropreview.png">MICRO BEAUTY</a>
-                <a class="screenshot" href="bacteria.html" rel="images/bacteriapreview.png">BACTERIA LETTERFORMS</a>
-                <a class="screenshot" href="jargon.html" rel="images/jargonpreview.gif">POSTERS</a>
-                <a class="screenshot" href="jamesblake.html" rel="images/jamesblakepreview.jpg">JAMES BLAKE REDESIGN</a>
-                <a class="screenshot" href="jm.html" rel="images/jmpreview.png">JOY MACHINE IDENTITY</a>
-                <a href="#contact">CONTACT/SOCIAL</a>
+            <div id="intro">
+              <div class="infoText">
+          			<p style="font-size: .5em; letter-spacing: 2px;">ADITI GANGURDE</p>
+          			I'm a freelance graphic designer from the Bay Area. My work consists of concept-driven print and digital visual design.
               </div>
+      			</div>
+          </div>
+        </div>
 
-              <footer id="contact">
-                <p><a href="mailto:aditigangurde@gmail.com?Subject=Hi!" target="_top" style="background-color: none;">EMAIL</a>
+          <!-- portfolio items -->
+        <div class="row">
+      		<div class="col-lg-12 mouseOver_text" id="nav">
+            <a class="screenshot" href="micro.html" rel="images/micropreview.png">MICRO BEAUTY</a>
+            <a class="screenshot" href="bacteria.html" rel="images/bacteriapreview.png">BACTERIA LETTERFORMS</a>
+            <a class="screenshot" href="jargon.html" rel="images/jargonpreview.gif">POSTERS</a>
+            <a class="screenshot" href="jamesblake.html" rel="images/jamesblakepreview.jpg">JAMES BLAKE REDESIGN</a>
+            <a class="screenshot" href="jm.html" rel="images/jmpreview.png">JOY MACHINE IDENTITY</a>
+            <a href="#contact" id="contactButton">CONTACT/SOCIAL</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="contact" class="col-lg-12">
+            <a href="mailto:aditigangurde@gmail.com?Subject=Hi!" target="_top" style="background-color: none;">
+                  EMAIL
+            </a>
                 
-                <a href="images/resume.pdf" target="_blank">
+            <a href="images/resume.pdf" target="_blank">
                   RESUME
-                </a> 
+            </a> 
 
-                <a href="https://www.behance.net/adtg" target="_blank">
+            <a href="https://www.behance.net/adtg" target="_blank">
                   BEHANCE
-                </a> 
+            </a> 
 
-                <a href="https://twitter.com/adtg_1" target="_blank"  class="icons" style="padding-right: 0;">
+            <a href="https://twitter.com/adtg_1" target="_blank"  class="icons" style="padding-right: 0;">
                   TWITTER
-                </a> 
+            </a> 
                 
-                </br><p style="font-size: .75em; color: #f6cdd5;">
-                  coded by aditi gangurde :)
-                </p>
-                  <a href="#top" style="padding-right: 0; font-size: 1.5em;">↑</a>
-              </footer>
+            <br>
+            <br>
+            <p style="font-size: .75em; color: #f6cdd5;">
+            coded by aditi gangurde :)
+            </p>
+            <a href="#top" style="padding-right: 0; font-size: 1.5em;">↑</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+
+          <!-- Custom JavaScript -->
+      <script type="text/javascript" src="js/main.js"></script>
 
   </body>
 
 
-
-<script type="text/javascript">
-
-function previewImages() {
-  /* CONFIG */
-
-  xOffset = 350;
-  yOffset = -60;
-
-  // these 2 variable determine popup's distance from the cursor
-  // you might want to adjust to get the right result
-
-  /* END CONFIG */
-
-  $("a.screenshot").hover(
-    function(e) {
-      var $this = $(this); // caching $(this)
-
-
-      $("body").append(
-        "<div id='previewImage'><img src='" +
-        this.rel +
-        "' alt='rens preview image' />" +
-        "</div>"
-      );
-
-      $("#previewImage")
-        .css("top", e.pageY - xOffset + "px")
-        .css("left", e.pageX + yOffset + "px")
-        .fadeIn("fast");
-    },
-    function() {
-      var $this = $(this); // caching $(this)
-      $this.text($this.data("initialText"));
-
-      $("#previewImage").remove();
-    }
-  );
-
-  $("a.screenshot").mousemove(function(e) {
-    $("#previewImage")
-      .css("top", e.pageY - xOffset + "px")
-      .css("left", e.pageX + yOffset + "px");
-  });
-}
-
-$(document).ready(function() {
-   $(window).resize();
-});
-
-$(window).resize(function() {
-   if ($(this).width() > 700) {
-      previewImages()
-   }
-});
-
-
-
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-
-</script>
 
 
 </html>
