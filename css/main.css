@@ -72,6 +72,9 @@ video {
 
 #background {
   margin: 2em;
+  background-color: #fff;
+  height: 100%;
+  width: auto;
 }
 
 #background > div:nth-child(1) > div {
@@ -84,6 +87,10 @@ video {
   display: none;
   margin-top: 2em;
   padding: 2em;
+}
+
+#contact a {
+  text-decoration: none;
 }
 
 
@@ -229,8 +236,12 @@ footer p{
 }
 
 footer a{
-  padding-right: 3em;
+  padding-right: 5em;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: #f6cdd5;
 }
 
 @media (max-width: 850px) {

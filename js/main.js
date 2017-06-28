@@ -1,7 +1,7 @@
 function previewImages() {
   /* CONFIG */
 
-  xOffset = 340;
+  xOffset = 310;
   yOffset = -60;
 
   // these 2 variable determine popup's distance from the cursor
