@@ -14,27 +14,23 @@
 		<link rel="stylesheet" href="css/main.css">
 
 
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 
 
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-3"> 
-				<div class="mycontent-left">
-					<p class="title">PROJECT</p> <p class="body">Lapide Jewelry </p> <p class="title">CONCEPT</p> <p class="body">Business card, example of window signage, price tags, carrying bag, and wrapping paper pattern created for a brand that creates jewelry made of gold and raw gemstones. Brand identity created based around gem and gold tones.
-				
-					  </p>
-				
-	
-		  		<a href="goldeneye.html">←</a> </a> <a href="index.html" style="font-size: .63em;">RETURN</a> <a href="misacat.html">→</a>
-		  	</div>
-		 	</div>
-	
-			<div class="col-sm-9">
-				<div class="mycontent-right">
+<div class="info">
+	<p class="title">PROJECT</p> <p class="body">Lapide Jewelry </p>
+	</div>
+
+    <div class="accordionItem close">
+      <p class="accordionItemHeading">INFO</p>
+      <div class="accordionItemContent">
+        <p>Business card, example of window signage, price tags, carrying bag, and wrapping paper pattern created for a brand that creates jewelry made of gold and raw gemstones. Brand identity created based around gem and gold tones.</p>
+      </div>
+    </div>
+				<div class="content">
 					<img src="images/cover.jpg">
 					<img src="images/businesscard.gif" style="margin: 1em;">
 					<img src="images/windowsign.jpg" style="margin: 1em;">
@@ -43,13 +39,31 @@
 					<img src="images/pattern.jpg"style="margin: 1em;" >
 					<img src="images/lapidegraphicstandard.jpg">
 				</div>
-			</div>
-	</div>
+
+
+
+		  		<div class="pagenav"><a href="goldeneye.html">←</a> </a> <a href="index.html" style="font-size: .63em;">RETURN</a> <a href="misacat.html">→</a>
+		  		</div>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+   <script> 	var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionItemHeading');
+    for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+    }
+    function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+        }
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+    }</script>
 
 
 

@@ -20,21 +20,22 @@
 
 
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-3"> 
-				<div class="mycontent-left">
-					<p class="title">PROJECT</p> <p class="body">MisaCat Blocks of Color </p> <p class="title">CONCEPT</p> <p class="body"> Selected pages from a photography book created for photographer <a href="http://www.misacat.com/">MisaCat</a>. Compositions made to represent the title "Blocks of Color."
-				
-					  </p>
-				
+
+<div class="info">
+	<p class="title">PROJECT</p> <p class="body">MisaCat Blocks of Color </p>
+	</div>
+
+    <div class="accordionItem close">
+      <p class="accordionItemHeading">INFO</p>
+      <div class="accordionItemContent">
+        <p>Selected pages from a photography book created for photographer <a href="http://www.misacat.com/">MisaCat</a>. Compositions made to represent the title "Blocks of Color."
+				</p>
+      </div>
+    </div>
 	
-		  		<a href="lapide.html">←</a> <a href="index.html" style="font-size: .63em;">RETURN</a> <a href="bonzai.html">→</a>
-		  	</div>
-		 	</div>
+		  	
 	
-			<div class="col-sm-9">
-				<div class="mycontent-right">
+				<div class="content">
 					<img src="images/misacover.png" style="margin: 1em;">
 					<img src="images/misa0203.png" style="margin: 1em;">
 					<img src="images/misa0405.png" style="margin: 1em;">
@@ -45,14 +46,27 @@
 					<img src="images/misa1819.png" style="margin: 1em;">
 					<img src="images/misa2021.png" style="margin: 1em;">
 				</div>
-			</div>
-	</div>
 
+<div class="pagenav"><a href="lapide.html">←</a> <a href="index.html" style="font-size: .63em;">RETURN</a> <a href="bonzai.html">→</a>
+</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
    <script src="bootstrap/js/bootstrap.min.js"></script>
-
+<script> 	var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionItemHeading');
+    for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+    }
+    function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+        }
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+    }</script>
 
 
 </body>

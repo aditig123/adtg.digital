@@ -31,7 +31,7 @@ body {
 p {
 	margin: 1em 1em 1em 1em;
 	color:#000;
-	font-size: .75em;
+	font-size: 1em;
   font-family: 'Futura';
 }
 
@@ -157,32 +157,92 @@ section {
   min-height: 100%;
 }
 
-.mycontent-left {
-    margin: 0;
-    padding: .75em;
-    height: 100%;
-    overflow: auto;
-    font-size: 1.5em;
-    position: fixed;
-    width: 25%;
-}
-
-.mycontent-left p {
+.info p {
     display: block;
     color: #000;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
 }
 
 .title {
-  font-size: .5em;
-  padding: .5em;
+  font-size: .75em;
+  padding: 2em;
   letter-spacing: 2px;
   padding-bottom: 0;
 }
 
+.accordionWrapper{
+  background:#fff;
+  float:left;
+  width:80%;
+  box-sizing:border-box;
+  margin:10%;    
+  box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+} 
+.accordionItem{
+    float:left;
+    display:block;
+    width:100%;
+
+}
+.accordionItemHeading{
+    cursor:pointer;
+    margin:0em 0em 2em 0em;
+    padding-top:1em;
+    width:100%;
+    letter-spacing: 2px;
+    font-family:'Futura';
+    color: #000;
+}
+
+.close .accordionItemHeading {
+  font-size: .5em;
+}
+.close .accordionItemContent{
+    height:0px;
+    -webkit-transition: height 1s ease-out;
+    transition:height 1s ease-out;
+    -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+    float:left;
+    display:block;
+}
+
+
+.open .accordionItemContent{
+    padding-left: 35em;
+    padding-right: 35em;
+    background-color: #fff;
+    width: 100%;
+    display: block;
+    margin: 0em 0em 2em 0em;
+    -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+    -webkit-transform-origin: top;
+  transform-origin: top;
+
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.open .accordionItemHeading{
+    margin:0px;
+    background-color: #fff;
+    color: #000;
+    font-size: .75em;
+}
+
+
+.content {
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
 .body {
-  margin-top: 0;
+  margin-top: 1em;
 }
 
 li a.active {
@@ -222,24 +282,20 @@ a:hover {
 
 .pagenav{
   text-align: center;
+  font-size: 1.5em;
+  padding: 1.5em;
 
 }
 
-@media (max-width: 850px) {
-  .infoText {
-    margin: .4em;
+
+@media only screen and (max-width: 574px) {
+    .content {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .open .accordionItemContent{
+    padding-left: 5em;
+    padding-right: 5em;
   }
-  #intro {
-    padding: 1em;
-    padding-bottom: 3.75em;
-  }
+
 }
-
-@media (max-width: 400px) {
-  #intro {
-    padding: 0; 
-    padding-bottom: 3.75em;
-    padding-top: .5em;
-  }
-} 
-
