@@ -164,6 +164,10 @@ section {
     text-align: center;
 }
 
+.info {
+  padding-top: 5em;
+}
+
 .title {
   font-size: .75em;
   padding: 2em;
@@ -183,6 +187,7 @@ section {
     float:left;
     display:block;
     width:100%;
+    padding-bottom: 4em;
 
 }
 .accordionItemHeading{
@@ -283,7 +288,7 @@ a:hover {
 .pagenav{
   text-align: center;
   font-size: 1.5em;
-  padding: 1.5em;
+  padding: 4em;
 
 }
 
@@ -297,9 +302,6 @@ a:hover {
     padding-left: 5em;
     padding-right: 5em;
   }
-    .accordionItem{
-    display: none; 
-  }
 
   #intro {
   color: #000;
@@ -307,9 +309,19 @@ a:hover {
   padding: 0em;
   }
 
-  #nav {
+  #nav a{
     display: block;
     margin: auto;
+    padding: .5em;
+    font-size: 1.5em;
+  }
+
+  #nav {
+      border-top: .4em #000;
+  }
+
+  .pagenav {
+    font-size: 2em;
   }
 
 }
